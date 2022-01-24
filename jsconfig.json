@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "baseUrl": "src",
+  },
+  "include": [
+    "src"
+  ]
+}
