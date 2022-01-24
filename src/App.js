@@ -6,6 +6,7 @@ import {
   Outlet,
   Navigate,
 } from 'react-router-dom';
+import Layout from './components/Layout/Layout';
 
 const MainPage = lazy(() => import('./components/MainPage/MainPage'));
 const Page404 = lazy(() => import('./components/Page404/Page404'));
@@ -37,7 +38,7 @@ const App = () => (
   <div className="App">
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Outlet />}>
+        <Route path="/" element={<Layout />}>
           <Route
             index
             element={(
