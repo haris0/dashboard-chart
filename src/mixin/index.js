@@ -42,20 +42,20 @@ export const getConversionItem = (datas) => {
 };
 
 export const getUsers = (datas) => {
-  const conversionMap = new Map();
+  const usersMap = new Map();
   datas.forEach((data) => {
-    if (conversionMap.has(data.conversion_item)) {
-      conversionMap.set(
+    if (usersMap.has(data.conversion_item)) {
+      usersMap.set(
         data.conversion_item,
-        conversionMap.get(data.conversion_item) + (+data.conversion_revenue),
+        usersMap.get(data.conversion_item) + 1,
       );
     } else {
-      conversionMap.set(data.conversion_item, +data.conversion_revenue);
+      usersMap.set(data.conversion_item, 1);
     }
   });
 
-  const conversionItem = Array.from(conversionMap.keys());
-  const conversionCount = Array.from(conversionMap.values());
+  const usersName = Array.from(usersMap.keys());
+  const usersCount = Array.from(usersMap.values());
 
-  return { conversionItem, conversionCount };
+  return { usersName, usersCount };
 };
