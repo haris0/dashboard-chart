@@ -11,24 +11,24 @@ import ConversionChart from './childs/ConversionChart';
 const MainPage = () => {
   const isMounted = useRef(true);
   const { loading, data } = useDasboardData(isMounted);
-  const { conversionItem, conversionCount } = getConversionItem(data.orders);
-  console.log(conversionItem, conversionCount);
+  const { conversionItem, conversionRevenue } = getConversionItem(data.orders);
+  console.log(conversionItem, conversionRevenue);
 
   return (
     <div className="main-page">
       <Row>
         <Col md={3} className="p-3">
-          <div className="box-height">
+          <div>
             {!loading && data && (
               <ConversionChart
                 conversionItem={conversionItem}
-                conversionCount={conversionCount}
+                conversionRevenue={conversionRevenue}
               />
             )}
           </div>
         </Col>
         <Col md={3} className="p-3">
-          <div className="box-height">
+          <div>
             Box 2
           </div>
         </Col>
@@ -40,7 +40,7 @@ const MainPage = () => {
       </Row>
       <Row>
         <Col md={4} className="p-3">
-          <div className="box-height">
+          <div>
             Box 4
           </div>
         </Col>

@@ -8,13 +8,13 @@ import Dot from '../../../assets/Dot.png';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const ConversionChart = ({ conversionItem, conversionCount }) => {
+const ConversionChart = ({ conversionItem, conversionRevenue }) => {
   const conversionData = {
     labels: conversionItem,
     datasets: [
       {
         label: '# of Votes',
-        data: conversionCount,
+        data: conversionRevenue,
         backgroundColor: [
           '#E4EAEB',
           '#725E9C',

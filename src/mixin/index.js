@@ -36,6 +36,25 @@ export const getConversionItem = (datas) => {
   });
 
   const conversionItem = Array.from(conversionMap.keys());
+  const conversionRevenue = Array.from(conversionMap.values());
+
+  return { conversionItem, conversionRevenue };
+};
+
+export const getUsers = (datas) => {
+  const conversionMap = new Map();
+  datas.forEach((data) => {
+    if (conversionMap.has(data.conversion_item)) {
+      conversionMap.set(
+        data.conversion_item,
+        conversionMap.get(data.conversion_item) + (+data.conversion_revenue),
+      );
+    } else {
+      conversionMap.set(data.conversion_item, +data.conversion_revenue);
+    }
+  });
+
+  const conversionItem = Array.from(conversionMap.keys());
   const conversionCount = Array.from(conversionMap.values());
 
   return { conversionItem, conversionCount };
