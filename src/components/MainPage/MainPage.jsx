@@ -14,13 +14,33 @@ const MainPage = () => {
   return (
     <div className="main-page">
       <Row>
-        <Col md={3}>Satu</Col>
-        <Col md={3}>Satu</Col>
-        <Col md={6}>Satu</Col>
+        <Col md={3}>
+          <div className="box-height">
+            Box 1
+          </div>
+        </Col>
+        <Col md={3}>
+          <div className="box-height">
+            Box 2
+          </div>
+        </Col>
+        <Col md={6}>
+          <div>
+            Box 3
+          </div>
+        </Col>
       </Row>
       <Row>
-        <Col md={4}>Satu</Col>
-        <Col md={8}>Satu</Col>
+        <Col md={4}>
+          <div className="box-height">
+            Box 4
+          </div>
+        </Col>
+        <Col md={8}>
+          <div>
+            Box 5
+          </div>
+        </Col>
       </Row>
     </div>
   );
