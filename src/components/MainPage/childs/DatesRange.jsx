@@ -12,7 +12,7 @@ const DatesRange = () => {
     },
   ]);
   return (
-    <Card className="conversion">
+    <Card className="dates">
       <Card.Body>
         <Card.Title className="card-title">
           <h3 className="text-title">
