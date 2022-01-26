@@ -60,7 +60,7 @@ const UsersChart = ({ usersName, usersCount }) => {
   };
 
   return (
-    <Card>
+    <Card className="users">
       <Card.Body>
         <Card.Title className="card-title">
           <h3 className="text-title">

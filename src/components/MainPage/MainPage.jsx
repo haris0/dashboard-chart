@@ -5,15 +5,18 @@ import {
   Row,
 } from 'react-bootstrap';
 import { useDasboardData } from '../../services';
-import { getConversionItem, getUsers } from '../../mixin';
+import { getConversionItem, getRevenue, getUsers } from '../../mixin';
 import ConversionChart from './childs/ConversionChart';
 import UsersChart from './childs/UsersChart';
+import RevenueChart from './childs/RevenueChart';
 
 const MainPage = () => {
   const isMounted = useRef(true);
   const { loading, data } = useDasboardData(isMounted);
   const { conversionItem, conversionRevenue } = getConversionItem(data.orders);
   const { usersName, usersCount } = getUsers(data.orders);
+  const revenueData = getRevenue(data.orders);
+  console.log(revenueData);
 
   return (
     <div className="main-page">
@@ -40,7 +43,11 @@ const MainPage = () => {
         </Col>
         <Col md={6} className="p-3">
           <div>
-            Box 3
+            {!loading && data && (
+              <RevenueChart
+                revenueData={revenueData}
+              />
+            )}
           </div>
         </Col>
       </Row>

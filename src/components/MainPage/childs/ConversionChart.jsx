@@ -52,7 +52,7 @@ const ConversionChart = ({ conversionItem, conversionRevenue }) => {
   };
 
   return (
-    <Card>
+    <Card className="conversion">
       <Card.Body>
         <Card.Title className="card-title">
           <h3 className="text-title">

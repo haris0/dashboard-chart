@@ -59,3 +59,12 @@ export const getUsers = (datas) => {
 
   return { usersName, usersCount };
 };
+
+export const getRevenue = (datas) => {
+  const revenueData = datas.map((data) => ({
+    x: new Date(data.start_date),
+    y: +data.conversion_revenue,
+  }));
+
+  return revenueData;
+};

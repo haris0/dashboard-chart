@@ -1,16 +1,18 @@
-.card-title {
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
-
-  .text-title {
-    margin-bottom: 0;
-  }
-
-  .btn-option {
-    background-color: white;
-    padding: 0px 8px;
-    border-radius: 5px;
-    border: 1px solid rgba(0,0,0,.125);
+.users {
+  .card-title {
+    margin-bottom: 4.2rem;
+    display: flex;
+    justify-content: space-between;
+  
+    .text-title {
+      margin-bottom: 0;
+    }
+  
+    .btn-option {
+      background-color: white;
+      padding: 0px 8px;
+      border-radius: 5px;
+      border: 1px solid rgba(0,0,0,.125);
+    }
   }
 }
