@@ -1,0 +1,19 @@
+.conversion {
+  .card-title {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+  
+    .text-title {
+      margin-bottom: 0;
+    }
+  }
+
+  .date-range {
+    width: 100%;
+
+    .rdrMonth {
+      width: 100%;
+    }
+  }
+}

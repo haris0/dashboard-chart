@@ -9,6 +9,7 @@ import { getConversionItem, getRevenue, getUsers } from '../../mixin';
 import ConversionChart from './childs/ConversionChart';
 import UsersChart from './childs/UsersChart';
 import RevenueChart from './childs/RevenueChart';
+import DatesRange from './childs/DatesRange';
 
 const MainPage = () => {
   const isMounted = useRef(true);
@@ -16,7 +17,6 @@ const MainPage = () => {
   const { conversionItem, conversionRevenue } = getConversionItem(data.orders);
   const { usersName, usersCount } = getUsers(data.orders);
   const revenueData = getRevenue(data.orders);
-  console.log(revenueData);
 
   return (
     <div className="main-page">
@@ -54,7 +54,9 @@ const MainPage = () => {
       <Row>
         <Col md={4} className="p-3">
           <div>
-            Box 4
+            {!loading && data && (
+              <DatesRange />
+            )}
           </div>
         </Col>
         <Col md={8} className="p-3">
