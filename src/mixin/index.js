@@ -1,4 +1,4 @@
-export const convertDate = (date) => {
+export const convertDate = (date, dateTime = false) => {
   if (!date) return '-';
 
   const monthLetter = [
@@ -16,8 +16,16 @@ export const convertDate = (date) => {
     'Desember',
   ];
   const day = String(date.getDate()).padStart(2, '0');
-  const month = date.getMonth();
+  let month = date.getMonth();
   const year = date.getFullYear();
+
+  if (dateTime) {
+    const hour = String(date.getHours()).padStart(2, '0');
+    const minute = String(date.getMinutes()).padStart(2, '0');
+    month = String(month + 1).padStart(2, '0');
+
+    return `${day}/${month}/${year} ${hour}:${minute}`;
+  }
 
   return `${day} ${monthLetter[(+month)]} ${year}`;
 };

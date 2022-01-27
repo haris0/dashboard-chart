@@ -10,6 +10,7 @@ import ConversionChart from './childs/ConversionChart';
 import UsersChart from './childs/UsersChart';
 import RevenueChart from './childs/RevenueChart';
 import DatesRange from './childs/DatesRange';
+import OrdersTable from './childs/OrdersTable';
 
 const MainPage = () => {
   const isMounted = useRef(true);
@@ -61,7 +62,7 @@ const MainPage = () => {
         </Col>
         <Col md={8} className="p-3">
           <div>
-            Box 5
+            <OrdersTable ordersData={data.orders} />
           </div>
         </Col>
       </Row>

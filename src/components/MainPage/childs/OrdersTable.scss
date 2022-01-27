@@ -1,0 +1,55 @@
+.orders-table {
+  padding: 16px;
+
+  .table {
+    margin-bottom: 0px !important;
+  }
+
+  .scrollable-table {
+    max-height: 25rem;
+    overflow-y: scroll;
+  }
+
+  .order-title {
+    margin-bottom: 24px;
+  }
+
+  .table-col {
+    height: 4rem;
+    vertical-align: middle;
+    background-color: #F5F5F5;
+  }
+
+  .table-row {
+    height: 4rem;
+    vertical-align: middle;
+    background-color: white !important;
+  }
+
+  .status {
+    border-radius: 5px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 0 10px;
+    color: white;
+  }
+
+  .pending {
+    background-color: #E59849;
+  }
+
+  .completed {
+    background-color: #789764;
+  }
+
+  .canceled {
+    background-color: #D66D4B;
+  }
+
+  .location-col {
+    max-width: 13rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
