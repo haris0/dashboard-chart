@@ -1,6 +1,6 @@
 # Dashboard Charts
 
-This app show dashboard with order data, from provided API.You can check this app demo on [Dashboard](https://dashboard-chart.netlify.app/).
+This app show dashboard with order data, from provided API.You can check this app demo on [Dashboard](https://dashboard-chartjs.netlify.app/).
 
 ## Build Setup
 In the project directory, you can run:
